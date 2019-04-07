@@ -182,7 +182,7 @@ def mustBeInNumber():
     for i in range(1, 10):
         if i == 1:
             box = set(boxNumberCollector(0, 0))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box) # all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -190,15 +190,18 @@ def mustBeInNumber():
                     for m in range(9):
                         if m < 3 and k < 3:
                             if sudoku[k][m]["value"] == 0:
+                                # checks if a number that is not in the box is missing in the horizontal or vertical 
                                 if num in horizontalNumberCollector(k) or num in verticalNumberCollector(m):
                                     pass
                                 else:
+                                # if it is not in the horizontal and vertical, it records the coordinate
                                     record += [[k, m]]
                 if len(record) == 1:
+                # and if there is only one cell in the box that one number can only be, it records
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 2:
             box = set(boxNumberCollector(0, 3))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -214,7 +217,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 3:
             box = set(boxNumberCollector(0, 6))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -230,7 +233,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 4:
             box = set(boxNumberCollector(3, 0))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -246,7 +249,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 5:
             box = set(boxNumberCollector(3, 3))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -262,7 +265,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 6:
             box = set(boxNumberCollector(3, 6))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -278,7 +281,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 7:
             box = set(boxNumberCollector(6, 0))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -294,7 +297,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 8:
             box = set(boxNumberCollector(6, 3))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
@@ -310,7 +313,7 @@ def mustBeInNumber():
                     sudoku[record[0][0]][record[0][1]]["value"] = num
         if i == 9:
             box = set(boxNumberCollector(6, 6))
-            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)
+            numbers = set([1, 2, 3, 4, 5, 6, 7, 8, 9]).difference(box)# all the numbers not in the box
 
             for num in numbers:
                 record = []
